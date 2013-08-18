@@ -5,21 +5,38 @@ block title
 
 block content
   .container
-    .pad-left.pad-right
-      h1.AverageSans.zero Typography
-      p Example usage of typography elements such as headings, paragraphs, lists, blockquotes, code and web fonts
+    .padded
+      .row
+        .three.fifths
+          h1.zero.museo-slab Typography
+          p.quicksand Example usage of typography elements such as headings, paragraphs, lists, blockquotes, code and web font
+        .two.fifths.align-right-ipad.align-right-desktop
+          p.quicksand Component Usage Example 3 of 10
+          p
+            a.blue.button(href='helpers.html')
+              i.icon-arrow-left
+              |  Back
+            | 
+            a.green.button(href='navigation.html')
+              | Next: Navigation 
+              i.icon-arrow-right
+    hr
     .row
       .one.whole.padded
-        h4.AverageSans Text Elements
+        h4 Headings
         .row
-          .one.third.padded
-            h1 Heading 1
-            h2 Heading 2
-            h3 Heading 3
-            h4 Heading 4
-            h5 Heading 5
-            h6 Heading 6
-          .one.third.padded
+          .one.whole.padded
+            h1 Heading 1: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            h2 Heading 2: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            h3 Heading 3: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            h4 Heading 4: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            h5 Heading 5: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            h6 Heading 6: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        hr
+        br
+        h4 Paragraphs & Lists
+        .row
+          .one.half.padded
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             p
               | Paragraph with 
@@ -44,9 +61,9 @@ block content
               del deleted text
             p
               | Paragraph with 
-              abbr.tooltip(title='Abreviated') abbr
+              abbr(title='Abreviated') abbr
               |  text
-          .one.third.padded
+          .one.half.padded
             ul.unstyled
               li Unstyled list item 1
               li Unstyled list item 2
@@ -65,7 +82,9 @@ block content
             ol.list
               li Styled ordered list item 1
               li Styled ordered list item 2
-        h4.AverageSans Colors
+        hr
+        br
+        h4 Colors
         .row
           .one.third.padded
             b
@@ -144,7 +163,9 @@ block content
               li.blue Styled ordered list item
               li.turquoise Styled ordered list item
               li.green Styled ordered list item
-        h4.AverageSans Links
+        hr
+        br
+        h4 Links
         .row
           .one.third.padded
             h1
@@ -209,21 +230,33 @@ block content
                 a(href="#") Styled ordered link list item 2
         hr
         br
-        h2.AmericanTypewriter Web Fonts Usage
+        h4 Web Fonts
         .row
-          .one.whole.padded
-            h5.AverageSans Average Sans webfont
-            h5.AmericanTypewriter American Typewriter webfont
+          .one.third.padded
+            h1.source-sans-pro Source Sans Pro
+          .one.third.padded
+            h1.museo-slab Museo Slab
+          .one.third.padded
+            h1.quicksand Quicksand
         hr
         br
-        h2.AmericanTypewriter Quotes
+        h4 Quotations
+        p
+          | This is a normal sentence with an 
+          quote
+            | inline quote
+          |  nested within it.
         blockquote
           | A computer once beat me at chess, but it was no match for me at kick boxing.
           cite
             | Emo Phillips
+        hr
         br
-        h2.AmericanTypewriter Code
-        h4.AverageSans Blocks
+        h4 Code
+        p
+          | This is some text with some
+          code inline code
+          | automatic
         pre
           code
             | $names: h1 h2 h3 h4 h5 h6 p blockquote cite small big large em italic b bold strong sup sub code pre info alert warning error invalid success valid;
@@ -237,11 +270,3 @@ block content
             |   }
           code
             | }
-        br
-        h4.AverageSans Inline
-        p
-          | This is some text with some
-          code inline code
-          | automatic
-        hr
-        br

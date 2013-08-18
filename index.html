@@ -69,14 +69,10 @@
       transform: translateZ(0);
       margin:-0.2em auto 0;
     }
-    #closeResizer, #openHome {
-      padding:0.3em 0.5em;
-      background:#fff;
-      border-radius:0.3em;
-      margin:1px 2px;
+    #closeResizer {
+      padding:0.3em 0.5em 0.2em;
       text-decoration:none;
       color:#222;
-      box-shadow:0 0 5px rgba(0,0,0,0.35);
     }
     a.rotate i, a[data-rotate] i {
       -webkit-transition: all 0.15s linear;
@@ -175,15 +171,15 @@
   </script>
   <div style="position:fixed;top:0;z-index:99;width:100%;">
     <div id="resizer">
-      <ul class="button-list pull-left">
-        <li><a class="tooltip active" title="Fullscreen" href="#" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'Desktop' ? 'active' : '' ?>" title="Desktop" href="#" data-viewport-width="1920" data-viewport-height="1080"><i class="icon-desktop"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'MacBook' ? 'active' : '' ?>" title="MacBook" href="#" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'iPad' ? 'active' : '' ?>" title="iPad" href="#" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'Android Tablet' ? 'active' : '' ?>" title="Android Tablet" href="#" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="icon-tablet" style="font-size:0.9em;"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'Android Phone' ? 'active' : '' ?>" title="Android Phone" href="#" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="icon-mobile-phone"></i></a></li>
-        <li><a class="tooltip <?php echo $_REQUEST['size'] == 'iPhone' ? 'active' : '' ?>" title="iPhone" href="#" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone" style="font-size:0.9em;"></i></a></li>
-        <li><a class="tooltip rotate <?php echo $_REQUEST['orientation'] == 'landscape' ? 'rotate-90-ctr' : '' ?>" title="Toggle Landscape/Portrait" href="#"><i class="icon-refresh"></i></a></li>
+      <ul class="button-group pull-left">
+        <li><a class="active" title="Fullscreen" href="#" data-viewport-width="100%" data-viewport-height="100%"><i class="icon-fullscreen"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'Desktop' ? 'active' : '' ?>" title="Desktop" href="#" data-viewport-width="1920" data-viewport-height="1080"><i class="icon-desktop"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'MacBook' ? 'active' : '' ?>" title="MacBook" href="#" data-viewport-width="1280px" data-viewport-height="800px"><i class="icon-laptop"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'iPad' ? 'active' : '' ?>" title="iPad" href="#" data-rotate="true" data-viewport-width="768px" data-viewport-height="1024px"><i class="icon-tablet"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'Android Tablet' ? 'active' : '' ?>" title="Android Tablet" href="#" data-rotate="true" data-viewport-width="720px" data-viewport-height="1280px"><i class="icon-tablet" style="font-size:0.9em;"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'Android Phone' ? 'active' : '' ?>" title="Android Phone" href="#" data-rotate="true" data-viewport-width="480px" data-viewport-height="720px"><i class="icon-mobile-phone"></i></a></li>
+        <li><a class="<?php echo $_REQUEST['size'] == 'iPhone' ? 'active' : '' ?>" title="iPhone" href="#" data-rotate="true" data-viewport-width="320px" data-viewport-height="640px"><i class="icon-mobile-phone" style="font-size:0.9em;"></i></a></li>
+        <li><a class="rotate <?php echo $_REQUEST['orientation'] == 'landscape' ? 'rotate-90-ctr' : '' ?>" title="Toggle Landscape/Portrait" href="#"><i class="icon-refresh"></i></a></li>
       </ul>
       <a id="closeResizer" class="pull-left" title="Close Resizer" href="./pages/home.html"><i class="icon-remove"></i></a>
     </div>
